@@ -58,8 +58,12 @@ printfn "%s" (toHtml html)
 // Output:
 //
 // Node
-//   ("p", [],
+//   ("p", [Attribute ("id", "main")],
 //    [Text "Text äöü <img/>"; Node ("br", [], []);
-//     Node ("img", [Attribute ("src", "saksjdgkj.png")], [])])
-//
-// <p>Text &#228;&#246;&#252; &lt;img/&gt;<br/><img src="saksjdgkj.png"/></p>
+//     Node
+//       ("img",
+//        [Attribute ("class", "image"); Attribute ("src", "saksjdgkj.png");
+//         Attribute ("alt", "Non-existing Image")], [])])
+
+// <p id="main">Text &#228;&#246;&#252; &lt;img/&gt;<br/><img class="image" src="saksjdgkj.png" alt="Non-existing Image"/></p>
+
