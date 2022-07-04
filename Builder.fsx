@@ -4,20 +4,22 @@
 type Attribute =
     | Attribute of key:string * value:string
 
+let attr key value = Attribute(key,value)
+let src src        = attr "src" src
+let alt text       = attr "alt" text
+let id id          = attr "id" id
+let Class _class   = attr "class" _class
+
 type Html =
     | Text of text:string
     | Node of name:string * attributes:List<Attribute> * nodes:List<Html>
 
-// Functions
-let attr key value        = Attribute(key,value)
-let node name attrs nodes = Node(name,attrs,nodes)
 let text txt              = Text(txt)
+let node name attrs nodes = Node(name,attrs,nodes)
 
-let p  = node "p"
-let br = node "br" [] []
-
-let img src nodes =
-    node "img" [attr "src" src] nodes
+let p   = node "p"
+let br  = node "br" [] []
+let img = node "img"
 
 // Convert a data-structure to HTML
 let rec toHtml html =
@@ -43,10 +45,10 @@ let rec toHtml html =
 
 // Usage
 let html =
-    p [] [
+    p [id "main"] [
         text "Text äöü <img/>"
         br
-        img "saksjdgkj.png" []
+        img [Class "image"; src "saksjdgkj.png"; alt "Non-existing Image"] []
     ]
 
 printfn "%A" html
