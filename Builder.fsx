@@ -13,9 +13,11 @@ let attr key value        = Attribute(key,value)
 let node name attrs nodes = Node(name,attrs,nodes)
 let text txt              = Text(txt)
 
-let p   = node "p"
-let img = node "img"
-let br  = node "br" [] []
+let p  = node "p"
+let br = node "br" [] []
+
+let img src nodes =
+    node "img" [attr "src" src] nodes
 
 // Convert a data-structure to HTML
 let rec toHtml html =
@@ -44,7 +46,7 @@ let html =
     p [] [
         text "Text äöü <img/>"
         br
-        img [attr "src" "saksjdgkj.png"] []
+        img "saksjdgkj.png" []
     ]
 
 printfn "%A" html
