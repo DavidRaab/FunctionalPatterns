@@ -28,3 +28,6 @@ You also can create structures that can be easily re-used.
 * Factory3.fsx - My own Example showing Partial Application
 * Factory4.fsx - A Java Example with Shapes converted to F#
 
+# Interpreter
+
+* Interpreter1.fsx - A simple Calculator
