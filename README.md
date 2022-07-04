@@ -26,4 +26,5 @@ You also can create structures that can be easily re-used.
 * Factory1.fsx - PHP CarFactory example re-written in F#
 * Factory2.fsx - Wikipedia IPerson example re-writte in F#
 * Factory3.fsx - My own Example showing Partial Application
+* Factory4.fsx - A Java Example with Shapes converted to F#
 
