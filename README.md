@@ -1,9 +1,9 @@
-I created this project alongside a Video called "Functional Pattern in F#".
+I created this project alongside a video called: **Functional Pattern in F#**
 
-You can find this video on Youtube: https://youtu.be/XiG-uuNKzF8
+You can find this video on YouTube: https://youtu.be/XiG-uuNKzF8
 
 In my version I used different styles how to solve problems.
-Also look into revisions to see how i probably changed solutions over time.
+Also look into revisions to see how I probably changed solutions over time.
 
 # Builder.fsx
 
